@@ -1,5 +1,88 @@
 @import url(./vendor/fonts.css);
 
-container {
+.root {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Roboto', Arial, sans-serif;
+}
+
+.container {
+  margin: 0 auto;
   width: 86.11%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.search {
+  position: relative;
+
+  width: 57.986%;
+
+  cursor: pointer;
+}
+
+.search__input {
+  border: 1px solid #EBEBF1;
+  padding: 12px 39px;
+  width: 100%;
+  border-radius: 5px;
+
+  font-size: 14px;
+}
+
+.search__image {
+  position: absolute;
+  left: 14px;
+  top: 12px;
+  
+  width: 16px;
+  height: 16px;
+}
+
+.profile {
+  display: flex;
+}
+
+.profile__photo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.partners__title {
+  text-transform: uppercase;
+}
+
+.partners__cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 30px;
+  padding: 0;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 287.5px;
+  height: 120px;
+  border: 1px solid #EBEBF1;
+  border-radius: 5px;
+
+  list-style: none;
+
+  cursor: pointer;
+}
+
+.card:hover {
+  box-shadow: -3px 0px 40px 0px #0000001A;
+}
+
+.card__image {
+  max-width: 234px;
+  max-height: 48px;
 }
