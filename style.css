@@ -3,30 +3,43 @@
 .root {
   display: flex;
   flex-direction: column;
+  margin: 0;
+  padding: 0;
+
   font-family: 'Roboto', Arial, sans-serif;
+  font-weight: 400;
+}
+
+.logo {
+  width: 10.887%;
 }
 
 .container {
   margin: 0 auto;
-  width: 86.11%;
+  width: 86.112%;
 }
 
 .header {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  gap: 4.8387%;
+  height: 80px;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.05);
 }
 
 .search {
   position: relative;
 
-  width: 57.986%;
+  max-width: 835px;
+  width: 100%;
+  box-sizing: border-box;
 
   cursor: pointer;
 }
 
 .search__input {
   border: 1px solid #EBEBF1;
-  padding: 12px 39px;
+  padding: 12px 0;
   width: 100%;
   border-radius: 5px;
 
@@ -35,15 +48,38 @@
 
 .search__image {
   position: absolute;
-  left: 14px;
-  top: 12px;
+  left: 11px;
+  top: 9px;
   
-  width: 16px;
-  height: 16px;
+  width: 24px;
+  height: 24px;
 }
 
 .profile {
+  position: relative;
+  
   display: flex;
+  gap: 10px;
+  padding-left: 19px;
+}
+
+.profile::before {
+  position: absolute;
+  top: -20px;
+  left: 0;
+  
+  display: block;
+  width: 1px;
+  height: 80px;
+  background-color: #EBEBF1;
+
+  content: "";
+}
+
+.profile__name {
+  font-size: 14px;
+  line-height: 1.2;
+  color: #768298;
 }
 
 .profile__photo {
@@ -53,14 +89,19 @@
 }
 
 .partners__title {
+  margin: 70px 0 30px;
+  
+  line-height: 1.6;
+  font-size: 36px;
   text-transform: uppercase;
 }
 
 .partners__cards {
   display: flex;
   flex-wrap: wrap;
+  column-gap: 2.42%;
+  row-gap: 30px;
   justify-content: flex-start;
-  gap: 30px;
   padding: 0;
 }
 
@@ -68,10 +109,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 287.5px;
+  width: 23.185%;
   height: 120px;
+  padding: 28px 27px;
   border: 1px solid #EBEBF1;
   border-radius: 5px;
+  box-sizing: border-box;
+  object-fit: cover;
 
   list-style: none;
 
@@ -83,6 +127,6 @@
 }
 
 .card__image {
-  max-width: 234px;
-  max-height: 48px;
+  max-width: 100%;
+  max-height: 64.2px;
 }
