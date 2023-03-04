@@ -11,7 +11,15 @@
 }
 
 .logo {
-  width: 10.887%;
+  width: 135.04px;
+
+  cursor: pointer;
+}
+
+@media screen and (max-width: 550px) {
+  .logo {
+    padding-left: 20.94px;
+  }
 }
 
 .container {
@@ -19,12 +27,64 @@
   width: 86.112%;
 }
 
+@media screen and (max-width: 768px) {
+  .container {
+    width: 94.791%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .container {
+    width: 89.333%;
+  }
+}
+
 .header {
   display: flex;
   align-items: center;
-  gap: 4.8387%;
+  justify-content: space-between;
+  gap: 4.838%;
   height: 80px;
+  padding: 0 6.944444%;
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    padding: 0 2.6%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .header {
+    flex-wrap: wrap;
+    gap: 6.51%;
+    height: 104px;
+    padding: 17px 0 0;
+    row-gap: 16px;
+    box-sizing: border-box;
+  }
+}
+
+.mobile-profile {
+  position: absolute;
+
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+@media screen and (max-width: 550px) {
+  .mobile-profile {
+    position: static;
+    width: 24px;
+    height: 24px;
+    padding-right: 20.94px;
+
+    visibility: visible;
+
+    cursor: pointer;
+  }
 }
 
 .search {
@@ -37,46 +97,104 @@
   cursor: pointer;
 }
 
+@media screen and (max-width: 768px) {
+  .search {
+    max-width: 344px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .search {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .search::before {
+    position: absolute;
+    top: -2px;
+
+    display: block;
+    height: 1px;
+    width: 100%;
+    background-color: #ebebf1;
+
+    content: ' ';
+  }
+}
+
 .search__input {
-  border: 1px solid #EBEBF1;
-  padding: 12px 0;
+  border: 1px solid #ebebf1;
+  padding: 11px 0 11px 39px;
   width: 100%;
   border-radius: 5px;
+  box-sizing: border-box;
 
   font-size: 14px;
 }
 
+@media screen and (max-width: 550px) {
+  .search__input {
+    border: none;
+    padding: 11px 0 11px 49px;
+  }
+}
+
 .search__image {
   position: absolute;
-  left: 11px;
-  top: 9px;
-  
+  left: 9px;
+  top: 7px;
+
   width: 24px;
   height: 24px;
 }
 
+@media screen and (max-width: 550px) {
+  .search__image {
+    left: 20px;
+  }
+}
+
 .profile {
   position: relative;
-  
+
   display: flex;
-  gap: 10px;
-  padding-left: 19px;
+  justify-content: flex-end;
+  align-items: center;
+  width: 148px;
+  padding-left: 22.5px;
+  box-sizing: border-box;
+
+  cursor: pointer;
 }
 
 .profile::before {
   position: absolute;
-  top: -20px;
-  left: 0;
-  
+  top: -18px;
+  left: -1px;
+
   display: block;
   width: 1px;
   height: 80px;
-  background-color: #EBEBF1;
+  background-color: #ebebf1;
 
-  content: "";
+  content: '';
+}
+
+@media screen and (max-width: 550px) {
+  .profile {
+    position: absolute;
+
+    width: 0;
+    height: 0;
+    visibility: hidden;
+  }
 }
 
 .profile__name {
+  margin-right: 10px;
+  padding: 0;
+
   font-size: 14px;
   line-height: 1.2;
   color: #768298;
@@ -90,10 +208,16 @@
 
 .partners__title {
   margin: 70px 0 30px;
-  
+
   line-height: 1.6;
   font-size: 36px;
   text-transform: uppercase;
+}
+
+@media screen and (max-width: 768px) {
+  .partners__title {
+    font-size: 28px;
+  }
 }
 
 .partners__cards {
@@ -102,7 +226,15 @@
   column-gap: 2.42%;
   row-gap: 30px;
   justify-content: flex-start;
+  margin: 0;
   padding: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .partners__cards {
+    column-gap: 2.7%;
+    row-gap: 20px;
+  }
 }
 
 .card {
@@ -110,9 +242,10 @@
   justify-content: center;
   align-items: center;
   width: 23.185%;
+  margin: 0;
   height: 120px;
   padding: 28px 27px;
-  border: 1px solid #EBEBF1;
+  outline: 1px solid #ebebf1;
   border-radius: 5px;
   box-sizing: border-box;
   object-fit: cover;
@@ -123,10 +256,31 @@
 }
 
 .card:hover {
-  box-shadow: -3px 0px 40px 0px #0000001A;
+  box-shadow: -3px 0px 40px 0px #0000001a;
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    width: 31.456%;
+    padding: 23px 22px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .card {
+    width: 100%;
+    height: 140px;
+    padding: 31px 44px;
+  }
 }
 
 .card__image {
   max-width: 100%;
   max-height: 64.2px;
+}
+
+@media screen and (max-width: 768px) {
+  .card__image {
+    max-height: 100%;
+  }
 }
